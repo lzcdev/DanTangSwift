@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		207008311E9614F900675A83 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008301E9614F900675A83 /* AppDelegate.swift */; };
+		207008361E9614F900675A83 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207008341E9614F900675A83 /* Main.storyboard */; };
+		207008381E9614F900675A83 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 207008371E9614F900675A83 /* Assets.xcassets */; };
+		2070083B1E9614F900675A83 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 207008391E9614F900675A83 /* LaunchScreen.storyboard */; };
+		207008461E9614F900675A83 /* DangTangSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008451E9614F900675A83 /* DangTangSwiftTests.swift */; };
+		207008511E9614F900675A83 /* DangTangSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008501E9614F900675A83 /* DangTangSwiftUITests.swift */; };
+		207008661E96167400675A83 /* DTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008651E96167400675A83 /* DTTabBarController.swift */; };
+		207008681E96169D00675A83 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008671E96169D00675A83 /* DTNavigationController.swift */; };
+		2070086B1E9616F200675A83 /* QorumLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070086A1E9616F200675A83 /* QorumLogs.swift */; };
+		2070086D1E96176000675A83 /* DTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070086C1E96176000675A83 /* DTConst.swift */; };
+		207008711E961CC800675A83 /* DTDanPinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008701E961CC800675A83 /* DTDanPinController.swift */; };
+		207008731E961CD700675A83 /* DTDanTangController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008721E961CD700675A83 /* DTDanTangController.swift */; };
+		207008751E961CE100675A83 /* DTMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008741E961CE100675A83 /* DTMeController.swift */; };
+		207008771E961DDD00675A83 /* DTClassifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008761E961DDD00675A83 /* DTClassifyController.swift */; };
+		4845DF2E14620CCACB928A36 /* Pods_DangTangSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25088985B4F399BFF51D47D3 /* Pods_DangTangSwift.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		207008421E9614F900675A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207008251E9614F900675A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2070082C1E9614F900675A83;
+			remoteInfo = DangTangSwift;
+		};
+		2070084D1E9614F900675A83 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 207008251E9614F900675A83 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2070082C1E9614F900675A83;
+			remoteInfo = DangTangSwift;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2070082D1E9614F900675A83 /* DangTangSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DangTangSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		207008301E9614F900675A83 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		207008351E9614F900675A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		207008371E9614F900675A83 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2070083A1E9614F900675A83 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		2070083C1E9614F900675A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207008411E9614F900675A83 /* DangTangSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DangTangSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207008451E9614F900675A83 /* DangTangSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangTangSwiftTests.swift; sourceTree = "<group>"; };
+		207008471E9614F900675A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2070084C1E9614F900675A83 /* DangTangSwiftUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DangTangSwiftUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		207008501E9614F900675A83 /* DangTangSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DangTangSwiftUITests.swift; sourceTree = "<group>"; };
+		207008521E9614F900675A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		207008651E96167400675A83 /* DTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTabBarController.swift; sourceTree = "<group>"; };
+		207008671E96169D00675A83 /* DTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
+		2070086A1E9616F200675A83 /* QorumLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QorumLogs.swift; sourceTree = "<group>"; };
+		2070086C1E96176000675A83 /* DTConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTConst.swift; sourceTree = "<group>"; };
+		207008701E961CC800675A83 /* DTDanPinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDanPinController.swift; sourceTree = "<group>"; };
+		207008721E961CD700675A83 /* DTDanTangController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDanTangController.swift; sourceTree = "<group>"; };
+		207008741E961CE100675A83 /* DTMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMeController.swift; sourceTree = "<group>"; };
+		207008761E961DDD00675A83 /* DTClassifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTClassifyController.swift; sourceTree = "<group>"; };
+		25088985B4F399BFF51D47D3 /* Pods_DangTangSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DangTangSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		796AE8CCF4308DC312D9FA96 /* Pods-DangTangSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangTangSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DangTangSwift/Pods-DangTangSwift.release.xcconfig"; sourceTree = "<group>"; };
+		A29585524AE140EA49252416 /* Pods-DangTangSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DangTangSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DangTangSwift/Pods-DangTangSwift.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2070082A1E9614F900675A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4845DF2E14620CCACB928A36 /* Pods_DangTangSwift.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2070083E1E9614F900675A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207008491E9614F900675A83 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		207008241E9614F900675A83 = {
+			isa = PBXGroup;
+			children = (
+				2070082F1E9614F900675A83 /* DangTangSwift */,
+				207008441E9614F900675A83 /* DangTangSwiftTests */,
+				2070084F1E9614F900675A83 /* DangTangSwiftUITests */,
+				2070082E1E9614F900675A83 /* Products */,
+				E547F9FF7DFE77C20884828D /* Pods */,
+				97615D3D6720ED1EA587FFEB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		2070082E1E9614F900675A83 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2070082D1E9614F900675A83 /* DangTangSwift.app */,
+				207008411E9614F900675A83 /* DangTangSwiftTests.xctest */,
+				2070084C1E9614F900675A83 /* DangTangSwiftUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2070082F1E9614F900675A83 /* DangTangSwift */ = {
+			isa = PBXGroup;
+			children = (
+				2070085E1E9615BA00675A83 /* Classes */,
+				207008301E9614F900675A83 /* AppDelegate.swift */,
+				207008341E9614F900675A83 /* Main.storyboard */,
+				207008371E9614F900675A83 /* Assets.xcassets */,
+				207008391E9614F900675A83 /* LaunchScreen.storyboard */,
+				2070083C1E9614F900675A83 /* Info.plist */,
+			);
+			path = DangTangSwift;
+			sourceTree = "<group>";
+		};
+		207008441E9614F900675A83 /* DangTangSwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				207008451E9614F900675A83 /* DangTangSwiftTests.swift */,
+				207008471E9614F900675A83 /* Info.plist */,
+			);
+			path = DangTangSwiftTests;
+			sourceTree = "<group>";
+		};
+		2070084F1E9614F900675A83 /* DangTangSwiftUITests */ = {
+			isa = PBXGroup;
+			children = (
+				207008501E9614F900675A83 /* DangTangSwiftUITests.swift */,
+				207008521E9614F900675A83 /* Info.plist */,
+			);
+			path = DangTangSwiftUITests;
+			sourceTree = "<group>";
+		};
+		2070085E1E9615BA00675A83 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				207008691E9616DE00675A83 /* Venders */,
+				2070085F1E9615BA00675A83 /* Classify */,
+				207008601E9615BA00675A83 /* DanPin */,
+				207008611E9615BA00675A83 /* DanTang */,
+				207008621E9615BA00675A83 /* Main */,
+				207008631E9615BA00675A83 /* Me */,
+				207008641E9615BA00675A83 /* Other */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2070085F1E9615BA00675A83 /* Classify */ = {
+			isa = PBXGroup;
+			children = (
+				207008761E961DDD00675A83 /* DTClassifyController.swift */,
+			);
+			path = Classify;
+			sourceTree = "<group>";
+		};
+		207008601E9615BA00675A83 /* DanPin */ = {
+			isa = PBXGroup;
+			children = (
+				207008701E961CC800675A83 /* DTDanPinController.swift */,
+			);
+			path = DanPin;
+			sourceTree = "<group>";
+		};
+		207008611E9615BA00675A83 /* DanTang */ = {
+			isa = PBXGroup;
+			children = (
+				207008721E961CD700675A83 /* DTDanTangController.swift */,
+			);
+			path = DanTang;
+			sourceTree = "<group>";
+		};
+		207008621E9615BA00675A83 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				207008651E96167400675A83 /* DTTabBarController.swift */,
+				207008671E96169D00675A83 /* DTNavigationController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		207008631E9615BA00675A83 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				207008741E961CE100675A83 /* DTMeController.swift */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		207008641E9615BA00675A83 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				2070086C1E96176000675A83 /* DTConst.swift */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		207008691E9616DE00675A83 /* Venders */ = {
+			isa = PBXGroup;
+			children = (
+				2070086A1E9616F200675A83 /* QorumLogs.swift */,
+			);
+			path = Venders;
+			sourceTree = "<group>";
+		};
+		97615D3D6720ED1EA587FFEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25088985B4F399BFF51D47D3 /* Pods_DangTangSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E547F9FF7DFE77C20884828D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A29585524AE140EA49252416 /* Pods-DangTangSwift.debug.xcconfig */,
+				796AE8CCF4308DC312D9FA96 /* Pods-DangTangSwift.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2070082C1E9614F900675A83 /* DangTangSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207008551E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwift" */;
+			buildPhases = (
+				9D80F05CDCBA4C0915B70C11 /* [CP] Check Pods Manifest.lock */,
+				207008291E9614F900675A83 /* Sources */,
+				2070082A1E9614F900675A83 /* Frameworks */,
+				2070082B1E9614F900675A83 /* Resources */,
+				0074BEDD78A6BA5739477796 /* [CP] Embed Pods Frameworks */,
+				3A50DDE2FE803C24BE4A70FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DangTangSwift;
+			productName = DangTangSwift;
+			productReference = 2070082D1E9614F900675A83 /* DangTangSwift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		207008401E9614F900675A83 /* DangTangSwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 207008581E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwiftTests" */;
+			buildPhases = (
+				2070083D1E9614F900675A83 /* Sources */,
+				2070083E1E9614F900675A83 /* Frameworks */,
+				2070083F1E9614F900675A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				207008431E9614F900675A83 /* PBXTargetDependency */,
+			);
+			name = DangTangSwiftTests;
+			productName = DangTangSwiftTests;
+			productReference = 207008411E9614F900675A83 /* DangTangSwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2070084B1E9614F900675A83 /* DangTangSwiftUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2070085B1E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwiftUITests" */;
+			buildPhases = (
+				207008481E9614F900675A83 /* Sources */,
+				207008491E9614F900675A83 /* Frameworks */,
+				2070084A1E9614F900675A83 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2070084E1E9614F900675A83 /* PBXTargetDependency */,
+			);
+			name = DangTangSwiftUITests;
+			productName = DangTangSwiftUITests;
+			productReference = 2070084C1E9614F900675A83 /* DangTangSwiftUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		207008251E9614F900675A83 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DT;
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = LuzhiChao;
+				TargetAttributes = {
+					2070082C1E9614F900675A83 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					207008401E9614F900675A83 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2070082C1E9614F900675A83;
+					};
+					2070084B1E9614F900675A83 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 2070082C1E9614F900675A83;
+					};
+				};
+			};
+			buildConfigurationList = 207008281E9614F900675A83 /* Build configuration list for PBXProject "DangTangSwift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 207008241E9614F900675A83;
+			productRefGroup = 2070082E1E9614F900675A83 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2070082C1E9614F900675A83 /* DangTangSwift */,
+				207008401E9614F900675A83 /* DangTangSwiftTests */,
+				2070084B1E9614F900675A83 /* DangTangSwiftUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2070082B1E9614F900675A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2070083B1E9614F900675A83 /* LaunchScreen.storyboard in Resources */,
+				207008381E9614F900675A83 /* Assets.xcassets in Resources */,
+				207008361E9614F900675A83 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2070083F1E9614F900675A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2070084A1E9614F900675A83 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0074BEDD78A6BA5739477796 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DangTangSwift/Pods-DangTangSwift-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3A50DDE2FE803C24BE4A70FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DangTangSwift/Pods-DangTangSwift-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D80F05CDCBA4C0915B70C11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		207008291E9614F900675A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207008731E961CD700675A83 /* DTDanTangController.swift in Sources */,
+				207008661E96167400675A83 /* DTTabBarController.swift in Sources */,
+				207008711E961CC800675A83 /* DTDanPinController.swift in Sources */,
+				2070086B1E9616F200675A83 /* QorumLogs.swift in Sources */,
+				207008771E961DDD00675A83 /* DTClassifyController.swift in Sources */,
+				207008311E9614F900675A83 /* AppDelegate.swift in Sources */,
+				207008681E96169D00675A83 /* DTNavigationController.swift in Sources */,
+				2070086D1E96176000675A83 /* DTConst.swift in Sources */,
+				207008751E961CE100675A83 /* DTMeController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2070083D1E9614F900675A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207008461E9614F900675A83 /* DangTangSwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		207008481E9614F900675A83 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				207008511E9614F900675A83 /* DangTangSwiftUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		207008431E9614F900675A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2070082C1E9614F900675A83 /* DangTangSwift */;
+			targetProxy = 207008421E9614F900675A83 /* PBXContainerItemProxy */;
+		};
+		2070084E1E9614F900675A83 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2070082C1E9614F900675A83 /* DangTangSwift */;
+			targetProxy = 2070084D1E9614F900675A83 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		207008341E9614F900675A83 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				207008351E9614F900675A83 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		207008391E9614F900675A83 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2070083A1E9614F900675A83 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		207008531E9614F900675A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		207008541E9614F900675A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		207008561E9614F900675A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A29585524AE140EA49252416 /* Pods-DangTangSwift.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DangTangSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		207008571E9614F900675A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 796AE8CCF4308DC312D9FA96 /* Pods-DangTangSwift.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = DangTangSwift/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwift;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		207008591E9614F900675A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DangTangSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DangTangSwift.app/DangTangSwift";
+			};
+			name = Debug;
+		};
+		2070085A1E9614F900675A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = DangTangSwiftTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwiftTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DangTangSwift.app/DangTangSwift";
+			};
+			name = Release;
+		};
+		2070085C1E9614F900675A83 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DangTangSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DangTangSwift;
+			};
+			name = Debug;
+		};
+		2070085D1E9614F900675A83 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = DangTangSwiftUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ljkj.DangTangSwiftUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = DangTangSwift;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		207008281E9614F900675A83 /* Build configuration list for PBXProject "DangTangSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207008531E9614F900675A83 /* Debug */,
+				207008541E9614F900675A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207008551E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207008561E9614F900675A83 /* Debug */,
+				207008571E9614F900675A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		207008581E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				207008591E9614F900675A83 /* Debug */,
+				2070085A1E9614F900675A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2070085B1E9614F900675A83 /* Build configuration list for PBXNativeTarget "DangTangSwiftUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2070085C1E9614F900675A83 /* Debug */,
+				2070085D1E9614F900675A83 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 207008251E9614F900675A83 /* Project object */;
+}
