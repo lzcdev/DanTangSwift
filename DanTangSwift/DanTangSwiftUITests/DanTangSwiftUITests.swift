@@ -1,6 +1,6 @@
 //
-//  DangTangSwiftUITests.swift
-//  DangTangSwiftUITests
+//  DanTangSwiftUITests.swift
+//  DanTangSwiftUITests
 //
 //  Created by LuzhiChao on 2017/4/6.
 //  Copyright © 2017年 LuzhiChao. All rights reserved.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class DangTangSwiftUITests: XCTestCase {
+class DanTangSwiftUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

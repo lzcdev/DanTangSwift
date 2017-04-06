@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  DangTangSwift
+//  DanTangSwift
 //
 //  Created by LuzhiChao on 2017/4/6.
 //  Copyright © 2017年 LuzhiChao. All rights reserved.
@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
+   
         // 开启打印
         QorumLogs.enabled = true
         
@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         window?.rootViewController = DTTabBarController()
+
         
         return true
     }
