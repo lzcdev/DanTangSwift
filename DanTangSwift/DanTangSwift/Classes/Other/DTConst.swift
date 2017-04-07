@@ -19,6 +19,10 @@ public let MainBounds = UIScreen.main.bounds
 public let NavHeight = 64
 // Tabbar高
 public let TabHeight = 49
+// 首页button的高度
+public let HomeTitlesViewHeight = 40
+// 粉红色
+public let GlobalColor = UIColor.colorWith(245, green: 80, blue: 83, alpha: 1)
 
 
 // UIColor的扩展-RGBA&HEX
