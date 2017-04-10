@@ -7,19 +7,52 @@
 //
 
 import UIKit
+import Alamofire
 
 let cellID = "cellID"
 
 class DanTangDetailController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    var tableView = UITableView()
     
+    var tableView = UITableView()
+    var bannerImageArray = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setTableView()
+        loadData()
+        
     }
+    
+    func loadData() {
+        
+        AFNetworkManager.get(api.bannerUrl, param: nil, success: { (response) in
+             QL2(response)
+            let bannerModel = HomeBannerModel(json: response["data"]["banners"])
+            QL4(bannerModel)
+            
+//            for index in 0..<response["data"]["banners"].count {
+//                QL4(bannerModel!)
+//                //QL3(bannerModel.homeBanner[index])
+//            }
+//            
+            //self.bannerImageArray = bannerModel.homeBanner as! [String]
+            
+            let cycleView = CycleView.cycleScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150), imageNameGroup: self.bannerImageArray.count > 0 ? self.bannerImageArray : ["walkthrough_1", "walkthrough_2", "walkthrough_3"])
+            //view.infiniteLoop = false
+            //view.autoScroll = false
+            //view.scrollDirection = .vertical
+            //let view = HomeHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
+            self.tableView.tableHeaderView = cycleView
 
+            self.tableView.reloadData()
+            
+            
+        }) { (error) in
+            
+        }
+        
+    }
+    
     func setTableView() {
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavHeight - TabHeight - HomeTitlesViewHeight), style: .plain)
         tableView.delegate = self
@@ -28,6 +61,8 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
         tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.register(UINib.init(nibName: "DanTangDetailCell", bundle: nil), forCellReuseIdentifier: cellID)
+        
+   
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -48,5 +83,5 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
         return 150
     }
     
-
+    
 }
