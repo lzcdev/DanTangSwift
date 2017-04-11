@@ -19,7 +19,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="337" height="119.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="walkthrough_1" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Xl-IsQ">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Xl-IsQ">
                         <rect key="frame" x="8" y="10" width="321" height="109.5"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -29,7 +29,7 @@
                         </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-oj-eHj">
-                        <rect key="frame" x="8" y="90.5" width="321" height="21"/>
+                        <rect key="frame" x="13" y="90.5" width="311" height="21"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="21" id="PlO-KH-XOX"/>
                         </constraints>
@@ -49,8 +49,8 @@
                 </subviews>
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="E1B-oj-eHj" secondAttribute="trailing" id="53f-wU-W1B"/>
-                    <constraint firstItem="E1B-oj-eHj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="KdF-t8-UHn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="E1B-oj-eHj" secondAttribute="trailing" constant="5" id="53f-wU-W1B"/>
+                    <constraint firstItem="E1B-oj-eHj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="KdF-t8-UHn"/>
                     <constraint firstAttribute="bottomMargin" secondItem="E1B-oj-eHj" secondAttribute="bottom" id="a1x-Y5-lfD"/>
                     <constraint firstAttribute="bottom" secondItem="Ocu-Xl-IsQ" secondAttribute="bottom" id="a2y-UD-w19"/>
                     <constraint firstItem="Ocu-Xl-IsQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="edC-0F-0AI"/>
@@ -68,6 +68,5 @@
     </objects>
     <resources>
         <image name="Feed_FavoriteIcon_17x17_" width="17" height="17"/>
-        <image name="walkthrough_1" width="1080" height="1920"/>
     </resources>
 </document>

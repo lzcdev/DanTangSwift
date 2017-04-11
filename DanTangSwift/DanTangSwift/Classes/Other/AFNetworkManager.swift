@@ -21,10 +21,8 @@ struct AFNetworkManager {
     // GET
     static func get(_ urlString: String, param: [String: Any]?, success: @escaping (JSON) -> Void, failure: @escaping (AFError) -> Void) -> Void {
         
-        let encoding: URLEncoding = param == nil ? .default: .httpBody
-        
         let realUrl = api.baseUrl + urlString
-        Alamofire.request(realUrl, method: .get, parameters: param, encoding: encoding).responseJSON { (response) in
+        Alamofire.request(realUrl, method: .get, parameters: param).responseJSON { (response) in
             
             guard response.result.isSuccess else {
                 SVProgressHUD.showError(withStatus: "加载失败")

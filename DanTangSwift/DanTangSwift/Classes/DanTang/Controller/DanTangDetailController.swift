@@ -15,42 +15,69 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
     
     var tableView = UITableView()
     var bannerImageArray = [String]()
+    var bannerModels = [HomeBannerModel]()
+    var listModels = [HomeListModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTableView()
-        loadData()
+        loadBannerData()
+        loadListData(id: 4)
         
     }
-    
-    func loadData() {
+    /// 请求banner数据
+    func loadBannerData() {
         
-        AFNetworkManager.get(api.bannerUrl, param: nil, success: { (response) in
-             QL2(response)
-            let bannerModel = HomeBannerModel(json: response["data"]["banners"])
-            QL4(bannerModel)
-            
-//            for index in 0..<response["data"]["banners"].count {
-//                QL4(bannerModel!)
-//                //QL3(bannerModel.homeBanner[index])
-//            }
-//            
-            //self.bannerImageArray = bannerModel.homeBanner as! [String]
+        AFNetworkManager.get(api.bannerUrl, param: ["channel":"iOS"], success: { (response) in
+            //QL2(response)
+            // 组装model
+            if let data = response["data"]["banners"].arrayObject {
+                for item in data {
+                    let banner = HomeBannerModel(dict: item as! [String : AnyObject])
+                    self.bannerModels.append(banner)
+                }
+            }
+            // banner几张图片
+            for item in self.bannerModels {
+                self.bannerImageArray.append(item.image_url!)
+            }
             
             let cycleView = CycleView.cycleScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150), imageNameGroup: self.bannerImageArray.count > 0 ? self.bannerImageArray : ["walkthrough_1", "walkthrough_2", "walkthrough_3"])
-            //view.infiniteLoop = false
-            //view.autoScroll = false
-            //view.scrollDirection = .vertical
-            //let view = HomeHeaderView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150))
             self.tableView.tableHeaderView = cycleView
-
             self.tableView.reloadData()
-            
-            
         }) { (error) in
             
         }
+    }
+    
+    func loadListData(id: Int) {
         
+        let idUrl = "/\(id)/items"
+        let param = [
+            "gender": "1",
+            "generation": "1",
+            "limit": "20",
+            "offset": "0",
+        ]
+        
+        AFNetworkManager.get(api.channelsUrl+idUrl, param: param, success: { (response) in
+            QL1(response)
+            // 组装model
+            if let data = response["data"]["items"].arrayObject {
+                for item in data {
+                    let list = HomeListModel(dict: item as! [String : AnyObject])
+                    self.listModels.append(list)
+                }
+            }
+            //
+//            for item in self.listModels {
+//                QL1(item.cover_image_url)
+//            }
+            self.tableView.reloadData()
+        }) { (error) in
+            
+        }
     }
     
     func setTableView() {
@@ -62,16 +89,17 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
         view.addSubview(tableView)
         tableView.register(UINib.init(nibName: "DanTangDetailCell", bundle: nil), forCellReuseIdentifier: cellID)
         
-   
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return listModels.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DanTangDetailCell
-        cell.titleLab.text = "来一份甜食，今天怎么能不开心呢"
+        cell.titleLab.text = listModels[indexPath.row].title! +  listModels[indexPath.row].title!
+        QL1(listModels[indexPath.row].cover_image_url)
+        cell.backgroundImage.kf.setImage(with: URL(string: listModels[indexPath.row].cover_image_url!))
         return cell
     }
     
