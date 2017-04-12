@@ -7,9 +7,8 @@
 //
 
 import UIKit
-import SnapKit
 
-class DTDanTangController: UIViewController, UIScrollViewDelegate {
+class DTDanTangController: BaseController, UIScrollViewDelegate {
     
     var topView = UIView() // 顶部背景
     let line = UIView() // 小横线

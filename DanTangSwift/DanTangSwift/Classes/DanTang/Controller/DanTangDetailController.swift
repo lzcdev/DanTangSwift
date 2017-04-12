@@ -7,25 +7,48 @@
 //
 
 import UIKit
-import Alamofire
+import MJRefresh
 
 let cellID = "cellID"
 
-class DanTangDetailController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class DanTangDetailController: BaseController, UITableViewDataSource, UITableViewDelegate {
     
     var tableView = UITableView()
     var bannerImageArray = [String]()
     var bannerModels = [HomeBannerModel]()
     var listModels = [HomeListModel]()
+    var offset: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTableView()
+        
         loadBannerData()
-        loadListData(id: 4)
+        loadListData(type: 4, offset: 0)
+        
+        // 下拉刷新上拉加载
+        tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadNew))
+        tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMore))
         
     }
+    // 下拉刷新
+    @objc private func loadNew() {
+        offset = 0
+        tableView.mj_header.beginRefreshing()
+        loadBannerData()
+        loadListData(type: 4, offset: offset)
+        tableView.mj_header.endRefreshing()
+        
+    }
+    // 上拉加载
+    @objc private func loadMore() {
+        tableView.mj_footer.beginRefreshing()
+        loadListData(type: 4, offset: offset)
+        tableView.mj_footer.endRefreshing()
+        
+    }
+    
     /// 请求banner数据
     func loadBannerData() {
         
@@ -51,18 +74,26 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
         }
     }
     
-    func loadListData(id: Int) {
+    /// 获取首页列表数据
+    ///
+    /// - Parameter type: 数据类型
+    func loadListData(type: Int, offset: Int) {
         
-        let idUrl = "/\(id)/items"
+        let idUrl = "/\(type)/items"
         let param = [
             "gender": "1",
             "generation": "1",
             "limit": "20",
-            "offset": "0",
-        ]
+            "offset": String(offset)
+            ]
         
         AFNetworkManager.get(api.channelsUrl+idUrl, param: param, success: { (response) in
-            QL1(response)
+            //QL1(response)
+            
+            if self.offset == 0 {
+                self.listModels.removeAll()
+            }
+            self.offset += 20
             // 组装model
             if let data = response["data"]["items"].arrayObject {
                 for item in data {
@@ -70,10 +101,7 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
                     self.listModels.append(list)
                 }
             }
-            //
-//            for item in self.listModels {
-//                QL1(item.cover_image_url)
-//            }
+            
             self.tableView.reloadData()
         }) { (error) in
             
@@ -84,7 +112,6 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
         tableView = UITableView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight - NavHeight - TabHeight - HomeTitlesViewHeight), style: .plain)
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.backgroundColor = UIColor.yellow
         tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.register(UINib.init(nibName: "DanTangDetailCell", bundle: nil), forCellReuseIdentifier: cellID)
@@ -97,8 +124,7 @@ class DanTangDetailController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DanTangDetailCell
-        cell.titleLab.text = listModels[indexPath.row].title! +  listModels[indexPath.row].title!
-        QL1(listModels[indexPath.row].cover_image_url)
+        cell.titleLab.text = listModels[indexPath.row].title
         cell.backgroundImage.kf.setImage(with: URL(string: listModels[indexPath.row].cover_image_url!))
         return cell
     }
