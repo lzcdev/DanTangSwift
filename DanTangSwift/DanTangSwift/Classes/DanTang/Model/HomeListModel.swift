@@ -16,7 +16,7 @@ class HomeListModel: NSObject {
     var title: String?
     var short_title: String?
     var liked: String?
-    var likes_count: String?
+    var likes_count: Int?
     
     init(dict: [String: AnyObject]) {
         cover_image_url = dict["cover_image_url"] as? String
@@ -26,7 +26,7 @@ class HomeListModel: NSObject {
         title = dict["title"] as? String
         short_title = dict["short_title"] as? String
         liked = dict["liked"] as? String
-        likes_count = dict["likes_count"] as? String
+        likes_count = dict["likes_count"] as? Int
         
     }
 }

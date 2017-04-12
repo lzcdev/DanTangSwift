@@ -21,12 +21,6 @@
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ocu-Xl-IsQ">
                         <rect key="frame" x="8" y="10" width="321" height="109.5"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                <integer key="value" value="4"/>
-                            </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1B-oj-eHj">
                         <rect key="frame" x="13" y="90.5" width="311" height="21"/>
@@ -37,11 +31,11 @@
                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97z-pR-PNL">
-                        <rect key="frame" x="298" y="12" width="17" height="22"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                        <state key="normal" title="100" image="Feed_FavoriteIcon_17x17_"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97z-pR-PNL">
+                        <rect key="frame" x="304" y="16" width="17" height="40"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40175513698630139" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                        <state key="normal" image="Feed_FavoriteIcon_17x17_"/>
                         <connections>
                             <action selector="favorite:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="WWx-qB-uIM"/>
                         </connections>
@@ -50,7 +44,9 @@
                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="E1B-oj-eHj" secondAttribute="trailing" constant="5" id="53f-wU-W1B"/>
+                    <constraint firstItem="97z-pR-PNL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="HBi-Gw-xF6"/>
                     <constraint firstItem="E1B-oj-eHj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="5" id="KdF-t8-UHn"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="97z-pR-PNL" secondAttribute="trailing" constant="8" id="NKe-fa-xKJ"/>
                     <constraint firstAttribute="bottomMargin" secondItem="E1B-oj-eHj" secondAttribute="bottom" id="a1x-Y5-lfD"/>
                     <constraint firstAttribute="bottom" secondItem="Ocu-Xl-IsQ" secondAttribute="bottom" id="a2y-UD-w19"/>
                     <constraint firstItem="Ocu-Xl-IsQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="edC-0F-0AI"/>

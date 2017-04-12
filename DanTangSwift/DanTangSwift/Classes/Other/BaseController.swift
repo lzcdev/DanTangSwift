@@ -7,16 +7,16 @@
 //
 
 import UIKit
-import MJRefresh
-import Alamofire
-import SnapKit
+import SVProgressHUD
 
 class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.custom)
+        SVProgressHUD.setMinimumDismissTimeInterval(1.0)
+
     }
 
 }

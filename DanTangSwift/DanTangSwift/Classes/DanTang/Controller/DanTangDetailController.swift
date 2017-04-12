@@ -85,7 +85,7 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
             "generation": "1",
             "limit": "20",
             "offset": String(offset)
-            ]
+        ]
         
         AFNetworkManager.get(api.channelsUrl+idUrl, param: param, success: { (response) in
             //QL1(response)
@@ -124,13 +124,20 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DanTangDetailCell
-        cell.titleLab.text = listModels[indexPath.row].title
-        cell.backgroundImage.kf.setImage(with: URL(string: listModels[indexPath.row].cover_image_url!))
+        cell.homeList = listModels[indexPath.row]
+        cell.like = { (index) in
+        print(index)
+        self.present(LoginController(), animated: true, completion: nil)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         QL2(indexPath.row)
+        let detailController = WebController()
+        detailController.urlString = listModels[indexPath.row].content_url
+        detailController.title = "攻略详情"
+        navigationController?.pushViewController(detailController, animated: true)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -10,25 +10,27 @@ import UIKit
 import SVProgressHUD
 
 class DTNavigationController: UINavigationController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         /// 设置导航栏标题
         let navBar = UINavigationBar.appearance()
         navBar.barTintColor = GlobalColor
         navBar.tintColor = UIColor.white
         navBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white, NSFontAttributeName: UIFont.systemFont(ofSize: 20)]
-    
+        
     }
-
+    
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if viewControllers.count > 0 {
-            let backBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
-            backBtn.setImage(UIImage(named: "checkUserType_backward_9x15_"), for: .normal)
-            backBtn.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-            let barBackBtn = UIBarButtonItem(customView: backBtn)
-            viewController.navigationItem.leftBarButtonItems = [barBackBtn]
+            viewController.hidesBottomBarWhenPushed = true
+            viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .plain, target: self, action: #selector(self.back))
+            //            let backBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
+            //            backBtn.setImage(UIImage(named: "checkUserType_backward_9x15_"), for: .normal)
+            //            backBtn.addTarget(self, action: #selector(self.back), for: .touchUpInside)
+            //            let barBackBtn = UIBarButtonItem(customView: backBtn)
+            //            viewController.navigationItem.leftBarButtonItems = [barBackBtn]
         }
         super.pushViewController(viewController, animated: animated)
     }
@@ -45,5 +47,5 @@ class DTNavigationController: UINavigationController {
         }
         self.popViewController(animated: true)
     }
-
+    
 }
