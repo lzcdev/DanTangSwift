@@ -35,6 +35,7 @@
 		20B59F411E9DF9DF005C0D37 /* BaseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59F401E9DF9DF005C0D37 /* BaseController.swift */; };
 		20B59F441E9E1082005C0D37 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59F431E9E1082005C0D37 /* LoginController.swift */; };
 		20B59F461E9E1A76005C0D37 /* WebController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59F451E9E1A76005C0D37 /* WebController.swift */; };
+		20DA81D01EA0C6B1008BAB17 /* HomeChannelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DA81CF1EA0C6B1008BAB17 /* HomeChannelModel.swift */; };
 		39D42F57D09A778760933EDC /* Pods_DanTangSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E1838A129EB3C276575E317 /* Pods_DanTangSwift.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		20B59F401E9DF9DF005C0D37 /* BaseController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseController.swift; sourceTree = "<group>"; };
 		20B59F431E9E1082005C0D37 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		20B59F451E9E1A76005C0D37 /* WebController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebController.swift; sourceTree = "<group>"; };
+		20DA81CF1EA0C6B1008BAB17 /* HomeChannelModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeChannelModel.swift; sourceTree = "<group>"; };
 		A512F6B1893BF04568A81B8D /* Pods-DanTangSwift.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTangSwift.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DanTangSwift/Pods-DanTangSwift.debug.xcconfig"; sourceTree = "<group>"; };
 		D72223ADD1F593B9EFC1BDD0 /* Pods-DanTangSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DanTangSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-DanTangSwift/Pods-DanTangSwift.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -267,6 +269,7 @@
 			children = (
 				20B59F021E9B58AE005C0D37 /* HomeBannerModel.swift */,
 				20B59F041E9CD5FB005C0D37 /* HomeListModel.swift */,
+				20DA81CF1EA0C6B1008BAB17 /* HomeChannelModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -511,6 +514,7 @@
 				207008CB1E962DAB00675A83 /* QorumLogs.swift in Sources */,
 				20B59F031E9B58AE005C0D37 /* HomeBannerModel.swift in Sources */,
 				20B59EFC1E9B20BB005C0D37 /* CycleCell.swift in Sources */,
+				20DA81D01EA0C6B1008BAB17 /* HomeChannelModel.swift in Sources */,
 				207008D31E97768000675A83 /* DanTangDetailController.swift in Sources */,
 				20B59F461E9E1A76005C0D37 /* WebController.swift in Sources */,
 				20B59F011E9B3793005C0D37 /* AFNetworkManager.swift in Sources */,

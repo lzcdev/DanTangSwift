@@ -11,21 +11,22 @@ import MJRefresh
 
 let cellID = "cellID"
 
-class DanTangDetailController: BaseController, UITableViewDataSource, UITableViewDelegate {
+class DanTangDetailController: BaseController {
     
     var tableView = UITableView()
     var bannerImageArray = [String]()
     var bannerModels = [HomeBannerModel]()
     var listModels = [HomeListModel]()
+    var type: Int = 0
     var offset: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setTableView()
-        
+        print(type)
         loadBannerData()
-        loadListData(type: 4, offset: 0)
+        loadListData(type: type, offset: 0)
         
         // 下拉刷新上拉加载
         tableView.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadNew))
@@ -37,20 +38,24 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
         offset = 0
         tableView.mj_header.beginRefreshing()
         loadBannerData()
-        loadListData(type: 4, offset: offset)
+        loadListData(type: type, offset: offset)
         tableView.mj_header.endRefreshing()
         
     }
     // 上拉加载
     @objc private func loadMore() {
         tableView.mj_footer.beginRefreshing()
-        loadListData(type: 4, offset: offset)
+        loadListData(type: type, offset: offset)
         tableView.mj_footer.endRefreshing()
         
     }
     
     /// 请求banner数据
     func loadBannerData() {
+        // 如果是首页就有banner
+        guard type == 4 else {
+            return
+        }
         
         AFNetworkManager.get(api.bannerUrl, param: ["channel":"iOS"], success: { (response) in
             //QL2(response)
@@ -87,8 +92,8 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
             "offset": String(offset)
         ]
         
-        AFNetworkManager.get(api.channelsUrl+idUrl, param: param, success: { (response) in
-            //QL1(response)
+        AFNetworkManager.get(api.listUrl+idUrl, param: param, success: { (response) in
+            QL1(response)
             
             if self.offset == 0 {
                 self.listModels.removeAll()
@@ -115,23 +120,12 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
         tableView.separatorStyle = .none
         view.addSubview(tableView)
         tableView.register(UINib.init(nibName: "DanTangDetailCell", bundle: nil), forCellReuseIdentifier: cellID)
-        
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return listModels.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DanTangDetailCell
-        cell.homeList = listModels[indexPath.row]
-        cell.like = { (index) in
-        print(index)
-        self.present(LoginController(), animated: true, completion: nil)
-        }
-        return cell
-    }
-    
+}
+
+
+// MARK: UITableViewDelegate
+extension DanTangDetailController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         QL2(indexPath.row)
         let detailController = WebController()
@@ -143,6 +137,22 @@ class DanTangDetailController: BaseController, UITableViewDataSource, UITableVie
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-    
-    
+}
+
+// MARK: UITableViewDataSource
+extension DanTangDetailController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listModels.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellID, for: indexPath) as! DanTangDetailCell
+        cell.homeList = listModels[indexPath.row]
+        cell.like = { (index) in
+            print(index)
+            self.present(LoginController(), animated: true, completion: nil)
+        }
+        return cell
+    }
+
 }

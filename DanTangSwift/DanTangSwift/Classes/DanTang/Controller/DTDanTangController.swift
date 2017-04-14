@@ -10,22 +10,21 @@ import UIKit
 
 class DTDanTangController: BaseController, UIScrollViewDelegate {
     
+    var topScrollView = UIScrollView()
     var topView = UIView() // 顶部背景
     let line = UIView() // 小横线
     let contentView = UIScrollView() // 下面的内容区域
     var selectedButton: UIButton! // 顶部背景上的按钮
-
+    var channelModels = [HomeChannelModel]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // 右上角搜索按钮
         setSearchBtn()
-        // 设置所有控制器
-        setChildViewControllers()
-        // 顶部滑动
-        setTopView()
-        // 正文
-        setContentView()
+        // 获取channel,设置控制器
+        getAllChannels()
+        
         
     }
     
@@ -37,38 +36,54 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
         QL2("search")
     }
     
-    private func setChildViewControllers() {
-
-        for _ in 0...6 {
-            let canteen = DanTangDetailController()
-            canteen.title = "精选"
-            self.addChildViewController(canteen)
+    func getAllChannels() {
+        let param = [
+            "gender": "1",
+            "generation": "1"
+        ]
+        AFNetworkManager.get(api.channelsUrl, param: param, success: { (response) in
+            // 组装model
+            if let data = response["data"]["channels"].arrayObject {
+                for item in data {
+                    let list = HomeChannelModel(dict: item as! [String : AnyObject])
+                    self.channelModels.append(list)
+                }
+            }
+            
+            for model in self.channelModels {
+                let ctrl = DanTangDetailController()
+                ctrl.title = model.name
+                ctrl.type = model.id!
+                self.addChildViewController(ctrl)
+            }
+            
+            // 顶部滑动
+            self.setTopView()
+            // 正文
+            self.setContentView()
+            
+        }) { (error) in
+            print(error)
         }
-
-        
-//                    let canteen = DanTangDetailController()
-//                    canteen.title = "精选"
-//                    self.addChildViewController(canteen)
-//        
-//        let me = DTMeController()
-//        me.title = "me"
-//        self.addChildViewController(me)
-//        
-//        let can = DTDanPinController()
-//        can.title = "哈哈"
-//        self.addChildViewController(can)
-        
-        
     }
     
     private func setTopView() {
         
-        topView = UIView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
+        topScrollView = UIScrollView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
+        topScrollView.backgroundColor = UIColor.cyan
+        // contentView.isPagingEnabled = true
+        topScrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(2), height: 0)
+        // contentView.bounces = false
+        // contentView.delegate = self
+        //  self.view.insertSubview(contentView, at: 0)
+        view.addSubview(topScrollView)
+        
+        //topView = UIView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
         //topView.backgroundColor = UIColor.colorWith(240, green: 240, blue: 240, alpha: 1)
-        view.addSubview(topView)
+        //view.addSubview(topView)
         
         let count = self.childViewControllers.count
-        let buttonW = ScreenWidth / count
+        let buttonW = ScreenWidth / 6
         
         line.backgroundColor = GlobalColor
         line.frame.size.height = 2
@@ -87,7 +102,7 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
             button.tag = index + 1
             button.isSelected = false
             button.addTarget(self, action: #selector(changeVC(button:)), for: .touchUpInside)
-            topView.addSubview(button)
+            topScrollView.addSubview(button)
             
             if index == 0 {
                 changeVC(button: button)
@@ -99,8 +114,8 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
             }
             
         }
-        topView.addSubview(line)
-
+        topScrollView.addSubview(line)
+        
         
     }
     
@@ -113,6 +128,8 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
         if selectedButton == button {
             return
         }
+        
+        
         
         selectedButton.isSelected = false
         button.isSelected = true

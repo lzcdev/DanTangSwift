@@ -22,6 +22,7 @@ struct AFNetworkManager {
     static func get(_ urlString: String, param: [String: Any]?, success: @escaping (JSON) -> Void, failure: @escaping (AFError) -> Void) -> Void {
         
         let realUrl = api.baseUrl + urlString
+        print(realUrl)
         Alamofire.request(realUrl, method: .get, parameters: param).responseJSON { (response) in
             
             guard response.result.isSuccess else {
@@ -39,7 +40,6 @@ struct AFNetworkManager {
             }
         }
     }
-    
     
     // POST
     
