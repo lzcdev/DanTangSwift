@@ -72,6 +72,16 @@ class DanTangDetailController: BaseController {
             }
             
             let cycleView = CycleView.cycleScrollView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: 150), imageNameGroup: self.bannerImageArray.count > 0 ? self.bannerImageArray : ["walkthrough_1", "walkthrough_2", "walkthrough_3"])
+            cycleView.selectClosure = { (index: Int) -> Void in
+                print(index)
+                print(self.bannerModels[index].targetModel?.id! ?? 0)
+                
+                let bannerDetail = BannerDetailController()
+                bannerDetail.id = self.bannerModels[index].targetModel?.id! ?? 0
+                bannerDetail.title = self.bannerModels[index].targetModel?.title
+                self.navigationController?.pushViewController(bannerDetail, animated: true)
+                
+            }
             self.tableView.tableHeaderView = cycleView
             self.tableView.reloadData()
         }) { (error) in
@@ -124,7 +134,7 @@ class DanTangDetailController: BaseController {
 }
 
 
-// MARK: UITableViewDelegate
+// MARK: - UITableViewDelegate
 extension DanTangDetailController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         QL2(indexPath.row)
@@ -139,7 +149,7 @@ extension DanTangDetailController: UITableViewDelegate {
     }
 }
 
-// MARK: UITableViewDataSource
+// MARK: - UITableViewDataSource
 extension DanTangDetailController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listModels.count
@@ -150,7 +160,8 @@ extension DanTangDetailController: UITableViewDataSource {
         cell.homeList = listModels[indexPath.row]
         cell.like = { (index) in
             print(index)
-            self.present(LoginController(), animated: true, completion: nil)
+            let nav = DTNavigationController(rootViewController: LoginController())
+            self.present(nav, animated: true, completion: nil)
         }
         return cell
     }

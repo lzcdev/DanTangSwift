@@ -70,7 +70,7 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
     private func setTopView() {
         
         topScrollView = UIScrollView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
-        topScrollView.backgroundColor = UIColor.cyan
+        //topScrollView.backgroundColor = UIColor.cyan
         // contentView.isPagingEnabled = true
         topScrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(2), height: 0)
         // contentView.bounces = false

@@ -25,6 +25,9 @@
 		207008D41E97768000675A83 /* DTDanTangController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008D01E97768000675A83 /* DTDanTangController.swift */; };
 		207008D71E9776C200675A83 /* DanTangDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008D51E9776C200675A83 /* DanTangDetailCell.swift */; };
 		207008D81E9776C200675A83 /* DanTangDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 207008D61E9776C200675A83 /* DanTangDetailCell.xib */; };
+		20A3972E1EA7376A00731B29 /* BannerDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3972D1EA7376A00731B29 /* BannerDetailController.swift */; };
+		20A397311EA747FA00731B29 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A3972F1EA747FA00731B29 /* RegisterController.swift */; };
+		20A397321EA747FA00731B29 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A397301EA747FA00731B29 /* RegisterController.xib */; };
 		20B59EF51E9B203E005C0D37 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EF41E9B203E005C0D37 /* CycleView.swift */; };
 		20B59EFC1E9B20BB005C0D37 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */; };
 		20B59EFD1E9B20BB005C0D37 /* CycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */; };
@@ -82,6 +85,9 @@
 		207008D01E97768000675A83 /* DTDanTangController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDanTangController.swift; sourceTree = "<group>"; };
 		207008D51E9776C200675A83 /* DanTangDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanTangDetailCell.swift; sourceTree = "<group>"; };
 		207008D61E9776C200675A83 /* DanTangDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanTangDetailCell.xib; sourceTree = "<group>"; };
+		20A3972D1EA7376A00731B29 /* BannerDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerDetailController.swift; sourceTree = "<group>"; };
+		20A3972F1EA747FA00731B29 /* RegisterController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		20A397301EA747FA00731B29 /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		20B59EF41E9B203E005C0D37 /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleCell.xib; sourceTree = "<group>"; };
@@ -260,6 +266,7 @@
 				207008CF1E97768000675A83 /* DanTangDetailController.swift */,
 				207008D01E97768000675A83 /* DTDanTangController.swift */,
 				20B59F451E9E1A76005C0D37 /* WebController.swift */,
+				20A3972D1EA7376A00731B29 /* BannerDetailController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -290,6 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				20B59F431E9E1082005C0D37 /* LoginController.swift */,
+				20A3972F1EA747FA00731B29 /* RegisterController.swift */,
+				20A397301EA747FA00731B29 /* RegisterController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -423,6 +432,7 @@
 			files = (
 				20B59EFD1E9B20BB005C0D37 /* CycleCell.xib in Resources */,
 				207008911E962D9F00675A83 /* LaunchScreen.storyboard in Resources */,
+				20A397321EA747FA00731B29 /* RegisterController.xib in Resources */,
 				2070088E1E962D9F00675A83 /* Assets.xcassets in Resources */,
 				207008D81E9776C200675A83 /* DanTangDetailCell.xib in Resources */,
 				2070088C1E962D9F00675A83 /* Main.storyboard in Resources */,
@@ -498,6 +508,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20A3972E1EA7376A00731B29 /* BannerDetailController.swift in Sources */,
 				20B59F411E9DF9DF005C0D37 /* BaseController.swift in Sources */,
 				207008891E962D9F00675A83 /* ViewController.swift in Sources */,
 				207008C81E962DAB00675A83 /* DTTabBarController.swift in Sources */,
@@ -517,6 +528,7 @@
 				20DA81D01EA0C6B1008BAB17 /* HomeChannelModel.swift in Sources */,
 				207008D31E97768000675A83 /* DanTangDetailController.swift in Sources */,
 				20B59F461E9E1A76005C0D37 /* WebController.swift in Sources */,
+				20A397311EA747FA00731B29 /* RegisterController.swift in Sources */,
 				20B59F011E9B3793005C0D37 /* AFNetworkManager.swift in Sources */,
 				207008D71E9776C200675A83 /* DanTangDetailCell.swift in Sources */,
 				207008871E962D9F00675A83 /* AppDelegate.swift in Sources */,

@@ -25,4 +25,7 @@ struct Api {
     // 首页列表地址
     let listUrl = "/v1/channels"
     
+    // 首页banner点进去的列表
+    let bannerDetailUrl = "v1/collections"
+    
 }

@@ -9,8 +9,11 @@
 import UIKit
 import Kingfisher
 
+typealias SelectClosure = (Int) -> Void
+
 class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    var selectClosure: SelectClosure?
     // 本地图片数组
     var localizationImageNamesGroup = [String]()  {
         didSet {
@@ -129,6 +132,10 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         QL2("\(indexPath.row)")
+        if self.selectClosure != nil  {
+            selectClosure!(indexPath.row % imagePathsGroup.count)
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

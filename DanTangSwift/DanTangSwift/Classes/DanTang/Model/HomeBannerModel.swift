@@ -23,12 +23,16 @@ class HomeBannerModel: NSObject {
         var subtitle: String?
         var title: String?
         var cover_image_url: String?
+        var id: Int?
+        
         
         init(target: [String: AnyObject]) {
             banner_image_url = target["banner_image_url"] as? String
             subtitle = target["subtitle"] as? String
             title = target["title"] as? String
             cover_image_url = target["cover_image_url"] as? String
+            id = target["id"] as? Int
+            
         }
     }
     

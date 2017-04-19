@@ -9,14 +9,28 @@
 import UIKit
 
 class LoginController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.white
+        title = "登录"
+        setNav()
     }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    
+}
+
+// MARK: - setNav
+extension LoginController {
+    func setNav() {
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "取消", style: .plain, target: self, action: #selector(LoginController.cancleClick))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(LoginController.registerClick))
+    }
+    
+    func cancleClick() {
         dismiss(animated: true, completion: nil)
     }
-
+    
+    func registerClick() {
+        navigationController?.pushViewController(RegisterController(), animated: true)
+    }
 }
