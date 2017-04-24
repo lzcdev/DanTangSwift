@@ -1,12 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterController" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegisterController" customModule="DanTangSwift" customModuleProvider="target">
             <connections>
+                <outlet property="phoneField" destination="nJp-1U-WV9" id="U2J-DA-FPE"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,7 +19,68 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="请确保你的手机畅通，已接受验证码短信" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eg4-qx-8RT">
+                    <rect key="frame" x="20" y="100" width="355" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="TGR-eB-2SJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YuW-qT-Siy">
+                    <rect key="frame" x="0.0" y="131" width="375" height="40"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nJp-1U-WV9">
+                            <rect key="frame" x="20" y="0.0" width="355" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="6pS-Dv-Gis"/>
+                            </constraints>
+                            <nil key="textColor"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="nJp-1U-WV9" firstAttribute="leading" secondItem="YuW-qT-Siy" secondAttribute="leading" constant="20" id="KkR-Vi-rEM"/>
+                        <constraint firstItem="nJp-1U-WV9" firstAttribute="top" secondItem="YuW-qT-Siy" secondAttribute="top" id="qS6-X6-thI"/>
+                        <constraint firstAttribute="height" constant="40" id="rAd-Qk-uII"/>
+                        <constraint firstAttribute="trailing" secondItem="nJp-1U-WV9" secondAttribute="trailing" id="vlg-Wk-k0u"/>
+                    </constraints>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DCh-cy-e9U">
+                    <rect key="frame" x="20" y="231" width="335" height="40"/>
+                    <color key="backgroundColor" red="0.96078431369999995" green="0.3294117647" blue="0.32549019610000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="vBW-lU-arq"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" title="获取验证码短信">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="titleShadowColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </button>
+            </subviews>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="Eg4-qx-8RT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="100" id="0bE-qg-fyl"/>
+                <constraint firstAttribute="trailing" secondItem="DCh-cy-e9U" secondAttribute="trailing" constant="20" id="0jl-ab-nga"/>
+                <constraint firstItem="YuW-qT-Siy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IFh-qg-b0f"/>
+                <constraint firstItem="DCh-cy-e9U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="QuL-Hq-9ay"/>
+                <constraint firstItem="Eg4-qx-8RT" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ah7-rI-v1c"/>
+                <constraint firstAttribute="trailing" secondItem="Eg4-qx-8RT" secondAttribute="trailing" id="ao5-XJ-PfF"/>
+                <constraint firstAttribute="trailing" secondItem="YuW-qT-Siy" secondAttribute="trailing" id="bel-TV-E7p"/>
+                <constraint firstItem="DCh-cy-e9U" firstAttribute="top" secondItem="YuW-qT-Siy" secondAttribute="bottom" constant="60" id="hUr-Jb-d4n"/>
+                <constraint firstItem="YuW-qT-Siy" firstAttribute="top" secondItem="Eg4-qx-8RT" secondAttribute="bottom" constant="10" id="rXa-7p-4t7"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="116.5"/>
         </view>
     </objects>
 </document>

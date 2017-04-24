@@ -26,11 +26,6 @@ class DTNavigationController: UINavigationController {
         if viewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
             viewController.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "checkUserType_backward_9x15_"), style: .plain, target: self, action: #selector(self.back))
-            //            let backBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 30, height: 44))
-            //            backBtn.setImage(UIImage(named: "checkUserType_backward_9x15_"), for: .normal)
-            //            backBtn.addTarget(self, action: #selector(self.back), for: .touchUpInside)
-            //            let barBackBtn = UIBarButtonItem(customView: backBtn)
-            //            viewController.navigationItem.leftBarButtonItems = [barBackBtn]
         }
         super.pushViewController(viewController, animated: animated)
     }

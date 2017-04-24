@@ -2,21 +2,21 @@
 //  LoginController.swift
 //  DanTangSwift
 //
-//  Created by LuzhiChao on 2017/4/12.
+//  Created by LuzhiChao on 2017/4/24.
 //  Copyright © 2017年 LuzhiChao. All rights reserved.
 //
 
 import UIKit
 
 class LoginController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = UIColor.white
+
         title = "登录"
         setNav()
     }
-    
+
 }
 
 // MARK: - setNav
