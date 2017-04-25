@@ -15,7 +15,6 @@
 		2070089C1E962D9F00675A83 /* DanTangSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070089B1E962D9F00675A83 /* DanTangSwiftTests.swift */; };
 		207008A71E962D9F00675A83 /* DanTangSwiftUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008A61E962D9F00675A83 /* DanTangSwiftUITests.swift */; };
 		207008C41E962DAB00675A83 /* DTClassifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008B61E962DAB00675A83 /* DTClassifyController.swift */; };
-		207008C51E962DAB00675A83 /* DTDanPinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008B81E962DAB00675A83 /* DTDanPinController.swift */; };
 		207008C71E962DAB00675A83 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BC1E962DAB00675A83 /* DTNavigationController.swift */; };
 		207008C81E962DAB00675A83 /* DTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BD1E962DAB00675A83 /* DTTabBarController.swift */; };
 		207008C91E962DAB00675A83 /* DTMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BF1E962DAB00675A83 /* DTMeController.swift */; };
@@ -30,6 +29,10 @@
 		20A397321EA747FA00731B29 /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A397301EA747FA00731B29 /* RegisterController.xib */; };
 		20A855571EADF538003676D1 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855551EADF538003676D1 /* LoginController.swift */; };
 		20A855581EADF538003676D1 /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A855561EADF538003676D1 /* LoginController.xib */; };
+		20A8555D1EAEE6D6003676D1 /* DTDanPinController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8555A1EAEE6D6003676D1 /* DTDanPinController.swift */; };
+		20A855601EAEE704003676D1 /* DanPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8555E1EAEE704003676D1 /* DanPinCell.swift */; };
+		20A855611EAEE704003676D1 /* DanPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A8555F1EAEE704003676D1 /* DanPinCell.xib */; };
+		20A855631EAEF9E9003676D1 /* DanPinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855621EAEF9E9003676D1 /* DanPinModel.swift */; };
 		20B59EF51E9B203E005C0D37 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EF41E9B203E005C0D37 /* CycleView.swift */; };
 		20B59EFC1E9B20BB005C0D37 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */; };
 		20B59EFD1E9B20BB005C0D37 /* CycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */; };
@@ -76,7 +79,6 @@
 		207008A61E962D9F00675A83 /* DanTangSwiftUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DanTangSwiftUITests.swift; sourceTree = "<group>"; };
 		207008A81E962D9F00675A83 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		207008B61E962DAB00675A83 /* DTClassifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTClassifyController.swift; sourceTree = "<group>"; };
-		207008B81E962DAB00675A83 /* DTDanPinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDanPinController.swift; sourceTree = "<group>"; };
 		207008BC1E962DAB00675A83 /* DTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
 		207008BD1E962DAB00675A83 /* DTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTabBarController.swift; sourceTree = "<group>"; };
 		207008BF1E962DAB00675A83 /* DTMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMeController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,10 @@
 		20A397301EA747FA00731B29 /* RegisterController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
 		20A855551EADF538003676D1 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		20A855561EADF538003676D1 /* LoginController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
+		20A8555A1EAEE6D6003676D1 /* DTDanPinController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTDanPinController.swift; sourceTree = "<group>"; };
+		20A8555E1EAEE704003676D1 /* DanPinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanPinCell.swift; sourceTree = "<group>"; };
+		20A8555F1EAEE704003676D1 /* DanPinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanPinCell.xib; sourceTree = "<group>"; };
+		20A855621EAEF9E9003676D1 /* DanPinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanPinModel.swift; sourceTree = "<group>"; };
 		20B59EF41E9B203E005C0D37 /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleCell.xib; sourceTree = "<group>"; };
@@ -211,7 +217,9 @@
 		207008B71E962DAB00675A83 /* DanPin */ = {
 			isa = PBXGroup;
 			children = (
-				207008B81E962DAB00675A83 /* DTDanPinController.swift */,
+				20A855591EAEE6D6003676D1 /* Controller */,
+				20A8555B1EAEE6D6003676D1 /* Model */,
+				20A8555C1EAEE6D6003676D1 /* View */,
 			);
 			path = DanPin;
 			sourceTree = "<group>";
@@ -291,6 +299,31 @@
 				20B59EF41E9B203E005C0D37 /* CycleView.swift */,
 				20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */,
 				20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20A855591EAEE6D6003676D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20A8555A1EAEE6D6003676D1 /* DTDanPinController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		20A8555B1EAEE6D6003676D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				20A855621EAEF9E9003676D1 /* DanPinModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20A8555C1EAEE6D6003676D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20A8555E1EAEE704003676D1 /* DanPinCell.swift */,
+				20A8555F1EAEE704003676D1 /* DanPinCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -434,6 +467,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				20B59EFD1E9B20BB005C0D37 /* CycleCell.xib in Resources */,
+				20A855611EAEE704003676D1 /* DanPinCell.xib in Resources */,
 				207008911E962D9F00675A83 /* LaunchScreen.storyboard in Resources */,
 				20A397321EA747FA00731B29 /* RegisterController.xib in Resources */,
 				20A855581EADF538003676D1 /* LoginController.xib in Resources */,
@@ -518,9 +552,9 @@
 				207008C81E962DAB00675A83 /* DTTabBarController.swift in Sources */,
 				207008CA1E962DAB00675A83 /* DTConst.swift in Sources */,
 				20B59EFF1E9B2463005C0D37 /* Api.swift in Sources */,
-				207008C51E962DAB00675A83 /* DTDanPinController.swift in Sources */,
 				207008D41E97768000675A83 /* DTDanTangController.swift in Sources */,
 				20B59F051E9CD5FB005C0D37 /* HomeListModel.swift in Sources */,
+				20A855601EAEE704003676D1 /* DanPinCell.swift in Sources */,
 				207008C41E962DAB00675A83 /* DTClassifyController.swift in Sources */,
 				207008C71E962DAB00675A83 /* DTNavigationController.swift in Sources */,
 				207008C91E962DAB00675A83 /* DTMeController.swift in Sources */,
@@ -530,10 +564,12 @@
 				20B59F031E9B58AE005C0D37 /* HomeBannerModel.swift in Sources */,
 				20B59EFC1E9B20BB005C0D37 /* CycleCell.swift in Sources */,
 				20DA81D01EA0C6B1008BAB17 /* HomeChannelModel.swift in Sources */,
+				20A8555D1EAEE6D6003676D1 /* DTDanPinController.swift in Sources */,
 				207008D31E97768000675A83 /* DanTangDetailController.swift in Sources */,
 				20B59F461E9E1A76005C0D37 /* WebController.swift in Sources */,
 				20A397311EA747FA00731B29 /* RegisterController.swift in Sources */,
 				20B59F011E9B3793005C0D37 /* AFNetworkManager.swift in Sources */,
+				20A855631EAEF9E9003676D1 /* DanPinModel.swift in Sources */,
 				207008D71E9776C200675A83 /* DanTangDetailCell.swift in Sources */,
 				207008871E962D9F00675A83 /* AppDelegate.swift in Sources */,
 			);

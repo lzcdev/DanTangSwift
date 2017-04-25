@@ -131,7 +131,7 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        QL2("\(indexPath.row)")
+        //QL2("\(indexPath.row)")
         if self.selectClosure != nil  {
             selectClosure!(indexPath.row % imagePathsGroup.count)
         }

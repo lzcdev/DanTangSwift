@@ -103,7 +103,7 @@ class DanTangDetailController: BaseController {
         ]
         
         AFNetworkManager.get(api.listUrl+idUrl, param: param, success: { (response) in
-            QL1(response)
+           // QL1(response)
             
             if self.offset == 0 {
                 self.listModels.removeAll()

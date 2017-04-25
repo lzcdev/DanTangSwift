@@ -28,4 +28,7 @@ struct Api {
     // 首页banner点进去的列表
     let bannerDetailUrl = "v1/collections"
     
+    // 单品
+    let danPinListUrl = "v2/items"
+    
 }
