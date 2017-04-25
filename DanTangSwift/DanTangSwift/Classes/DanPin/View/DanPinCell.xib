@@ -12,58 +12,77 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="DanPinCell" customModule="DanTangSwift" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="154" height="200"/>
+            <rect key="frame" x="0.0" y="0.0" width="149" height="186"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="154" height="200"/>
+                <rect key="frame" x="0.0" y="0.0" width="149" height="186"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="161-hf-CGv">
-                        <rect key="frame" x="0.0" y="125" width="154" height="40"/>
-                        <color key="backgroundColor" red="1" green="0.47929387680000002" blue="0.3573345456" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="8" y="120" width="133" height="40"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="PXd-8z-KKC"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.14019636971643021" green="0.14117647059999999" blue="0.10723602644310734" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PTg-PI-BLB">
-                        <rect key="frame" x="0.0" y="0.0" width="154" height="120"/>
+                        <rect key="frame" x="0.0" y="0.0" width="149" height="120"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="120" id="Ffl-fI-I1r"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="58.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7d-OM-PJo">
-                        <rect key="frame" x="5" y="170" width="60" height="21"/>
+                        <rect key="frame" x="5" y="165" width="80" height="21"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="Irt-QL-pHz"/>
+                            <constraint firstAttribute="width" constant="80" id="Irt-QL-pHz"/>
                             <constraint firstAttribute="height" constant="21" id="ZZz-EX-KKw"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                         <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqI-w7-ZpI">
+                        <rect key="frame" x="85" y="165" width="64" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="Ef0-Nb-TX4"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <inset key="imageEdgeInsets" minX="-5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <state key="normal" title="0" image="Search_GiftBtn_Default_12x10_">
+                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                    </button>
                 </subviews>
             </view>
-            <color key="backgroundColor" red="0.99069827795028687" green="0.9170578166494795" blue="0.59070855358491814" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
+                <constraint firstItem="bqI-w7-ZpI" firstAttribute="leading" secondItem="b7d-OM-PJo" secondAttribute="trailing" id="0FR-dE-4gw"/>
                 <constraint firstItem="b7d-OM-PJo" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="5Sb-kV-qcd"/>
                 <constraint firstItem="b7d-OM-PJo" firstAttribute="top" secondItem="161-hf-CGv" secondAttribute="bottom" constant="5" id="B22-fj-34N"/>
-                <constraint firstItem="161-hf-CGv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="MSx-wK-2xi"/>
+                <constraint firstItem="161-hf-CGv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="MSx-wK-2xi"/>
                 <constraint firstAttribute="trailing" secondItem="PTg-PI-BLB" secondAttribute="trailing" id="N4T-ev-aGz"/>
-                <constraint firstAttribute="trailing" secondItem="161-hf-CGv" secondAttribute="trailing" id="QbZ-g6-1z0"/>
+                <constraint firstAttribute="trailing" secondItem="161-hf-CGv" secondAttribute="trailing" constant="8" id="QbZ-g6-1z0"/>
                 <constraint firstItem="PTg-PI-BLB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="cAK-ez-ALK"/>
+                <constraint firstItem="bqI-w7-ZpI" firstAttribute="top" secondItem="161-hf-CGv" secondAttribute="bottom" constant="5" id="e11-RB-i47"/>
+                <constraint firstAttribute="trailing" secondItem="bqI-w7-ZpI" secondAttribute="trailing" id="hNq-dq-xr9"/>
                 <constraint firstItem="PTg-PI-BLB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="kuu-x8-agZ"/>
-                <constraint firstItem="161-hf-CGv" firstAttribute="top" secondItem="PTg-PI-BLB" secondAttribute="bottom" constant="5" id="oHx-Yt-9aU"/>
+                <constraint firstItem="161-hf-CGv" firstAttribute="top" secondItem="PTg-PI-BLB" secondAttribute="bottom" id="oHx-Yt-9aU"/>
             </constraints>
-            <size key="customSize" width="170" height="183"/>
+            <size key="customSize" width="165" height="163"/>
             <connections>
                 <outlet property="imageView" destination="PTg-PI-BLB" id="yaU-ju-9Np"/>
+                <outlet property="likeLab" destination="bqI-w7-ZpI" id="mdF-Md-pg1"/>
                 <outlet property="priceLab" destination="b7d-OM-PJo" id="d6C-qY-lSv"/>
                 <outlet property="titleLab" destination="161-hf-CGv" id="JWa-zF-llH"/>
             </connections>
-            <point key="canvasLocation" x="-67" y="127"/>
+            <point key="canvasLocation" x="-69.5" y="117"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="Search_GiftBtn_Default_12x10_" width="12" height="10"/>
+    </resources>
 </document>

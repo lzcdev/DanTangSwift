@@ -30,6 +30,7 @@ class DanPinModel: NSObject {
         var purchase_status: Int?
         var favorites_count: Int?
         var cover_image_url: String?
+        var price: String?
         
         
         init(target: [String: AnyObject]) {
@@ -41,6 +42,8 @@ class DanPinModel: NSObject {
             purchase_status = target["purchase_status"] as? Int
             favorites_count = target["favorites_count"] as? Int
             cover_image_url = target["cover_image_url"] as? String
+            price = target["price"] as? String
+            
             
         }
     }

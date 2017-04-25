@@ -19,14 +19,13 @@ class DTDanPinController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // ?gender=1&generation=1&limit=20&offset=0
         setupCollectionView()
         
         getData(offset: offset)
         
         // 下拉刷新上拉加载
         collectionView!.mj_header = MJRefreshNormalHeader(refreshingTarget: self, refreshingAction: #selector(loadNew))
-      //  collectionView!.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMore))
+        collectionView!.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(loadMore))
     }
     
     // 下拉刷新
@@ -82,6 +81,7 @@ class DTDanPinController: UIViewController {
         collectionView = UICollectionView(frame: CGRect(x: 0, y: 0, width: ScreenWidth, height: ScreenHeight), collectionViewLayout: layout)
         collectionView!.delegate = self
         collectionView!.dataSource = self
+        collectionView?.backgroundColor = UIColor.groupTableViewBackground
         view.addSubview(collectionView!)
         collectionView!.register(UINib.init(nibName: "DanPinCell", bundle: nil), forCellWithReuseIdentifier: "DanPinCell")
     }
@@ -92,6 +92,12 @@ class DTDanPinController: UIViewController {
 extension DTDanPinController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         QL2("collection")
+        
+        let detailController = WebController()
+        detailController.urlString = listModels[indexPath.row].dataModel?.url
+        detailController.title = "商品详情"
+        navigationController?.pushViewController(detailController, animated: true)
+
     }
 }
 
@@ -103,9 +109,7 @@ extension DTDanPinController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DanPinCell", for: indexPath) as! DanPinCell
         let model = listModels[indexPath.row]
-        cell.titleLab.text = model.dataModel?.name
-        cell.imageView.kf.setImage(with: URL(string: (model.dataModel?.cover_image_url)!))
-        
+        cell.model = model
         return cell
     }
 }
@@ -117,7 +121,7 @@ extension DTDanPinController: UICollectionViewDelegateFlowLayout {
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: ScreenWidth / 2 - 15, height: 200)
+        return CGSize(width: ScreenWidth / 2 - 15, height: 190)
     }
 }
 
