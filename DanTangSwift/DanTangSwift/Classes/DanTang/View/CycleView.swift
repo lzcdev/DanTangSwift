@@ -64,6 +64,7 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
     var pageDotColor: UIColor = UIColor.lightGray // 其他分页控件小圆标颜色
     //    var currentPageDotImage: UIImageView // 当前分页控件小圆标图片
     //    var pageDotImage: UIImageView // 其他分页控件小圆标图片
+    var animation = CATransition()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -117,6 +118,9 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
             }else{
                 targetIndex = 0;
             }
+            setAnimation()
+            collectionView?.layer.add(animation, forKey: nil)
+            
             collectionView?.scrollToItem(at: NSIndexPath(item: targetIndex, section: 0) as IndexPath, at: .right, animated: false)
         }
     }
@@ -163,7 +167,7 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func setupTimer() {
-        let timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
+        let timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(automaticScroll), userInfo: nil, repeats: true)
         RunLoop.main.add(timer, forMode: .commonModes)
         self.timer = timer
     }
@@ -175,6 +179,10 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
     }
     
     func scrollToIndex(targetIndex: Int) {
+        // 小动画
+        setAnimation()
+        collectionView?.layer.add(animation, forKey: nil)
+        
         if targetIndex >= totalItemsCount {
             if infiniteLoop {
                 let index = targetIndex % totalItemsCount
@@ -182,10 +190,26 @@ class CycleView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, U
             }
             return
         }
+    
+      
         collectionView?.scrollToItem(at: NSIndexPath(item: targetIndex, section: 0) as IndexPath, at: .right, animated: true)
     }
     
+    func setAnimation() {
+        animation = CATransition()
+        //设置运动轨迹的速度
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn);
+        //设置动画类型为立方体动画
+        animation.type = "cube";
+        //设置动画时长
+        animation.duration = 1;
+        //设置运动的方向
+        animation.subtype = kCATransitionFromRight;
+
+    }
+    
     func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        
         invalidateTimer()
     }
     
