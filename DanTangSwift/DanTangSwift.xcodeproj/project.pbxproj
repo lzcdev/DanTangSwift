@@ -17,7 +17,6 @@
 		207008C41E962DAB00675A83 /* DTClassifyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008B61E962DAB00675A83 /* DTClassifyController.swift */; };
 		207008C71E962DAB00675A83 /* DTNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BC1E962DAB00675A83 /* DTNavigationController.swift */; };
 		207008C81E962DAB00675A83 /* DTTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BD1E962DAB00675A83 /* DTTabBarController.swift */; };
-		207008C91E962DAB00675A83 /* DTMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008BF1E962DAB00675A83 /* DTMeController.swift */; };
 		207008CA1E962DAB00675A83 /* DTConst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008C11E962DAB00675A83 /* DTConst.swift */; };
 		207008CB1E962DAB00675A83 /* QorumLogs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008C31E962DAB00675A83 /* QorumLogs.swift */; };
 		207008D31E97768000675A83 /* DanTangDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207008CF1E97768000675A83 /* DanTangDetailController.swift */; };
@@ -33,6 +32,10 @@
 		20A855601EAEE704003676D1 /* DanPinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A8555E1EAEE704003676D1 /* DanPinCell.swift */; };
 		20A855611EAEE704003676D1 /* DanPinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20A8555F1EAEE704003676D1 /* DanPinCell.xib */; };
 		20A855631EAEF9E9003676D1 /* DanPinModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855621EAEF9E9003676D1 /* DanPinModel.swift */; };
+		20A855AC1EB085E9003676D1 /* DTMeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855A91EB085E9003676D1 /* DTMeController.swift */; };
+		20A855AE1EB0865A003676D1 /* MeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855AD1EB0865A003676D1 /* MeHeaderView.swift */; };
+		20A855B01EB098A9003676D1 /* MeChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855AF1EB098A9003676D1 /* MeChoiceView.swift */; };
+		20A855B21EB0990A003676D1 /* MeFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A855B11EB0990A003676D1 /* MeFooterView.swift */; };
 		20B59EF51E9B203E005C0D37 /* CycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EF41E9B203E005C0D37 /* CycleView.swift */; };
 		20B59EFC1E9B20BB005C0D37 /* CycleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */; };
 		20B59EFD1E9B20BB005C0D37 /* CycleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */; };
@@ -81,7 +84,6 @@
 		207008B61E962DAB00675A83 /* DTClassifyController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTClassifyController.swift; sourceTree = "<group>"; };
 		207008BC1E962DAB00675A83 /* DTNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTNavigationController.swift; sourceTree = "<group>"; };
 		207008BD1E962DAB00675A83 /* DTTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTTabBarController.swift; sourceTree = "<group>"; };
-		207008BF1E962DAB00675A83 /* DTMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMeController.swift; sourceTree = "<group>"; };
 		207008C11E962DAB00675A83 /* DTConst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTConst.swift; sourceTree = "<group>"; };
 		207008C31E962DAB00675A83 /* QorumLogs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QorumLogs.swift; sourceTree = "<group>"; };
 		207008CF1E97768000675A83 /* DanTangDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanTangDetailController.swift; sourceTree = "<group>"; };
@@ -97,6 +99,10 @@
 		20A8555E1EAEE704003676D1 /* DanPinCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanPinCell.swift; sourceTree = "<group>"; };
 		20A8555F1EAEE704003676D1 /* DanPinCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DanPinCell.xib; sourceTree = "<group>"; };
 		20A855621EAEF9E9003676D1 /* DanPinModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DanPinModel.swift; sourceTree = "<group>"; };
+		20A855A91EB085E9003676D1 /* DTMeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DTMeController.swift; sourceTree = "<group>"; };
+		20A855AD1EB0865A003676D1 /* MeHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeHeaderView.swift; sourceTree = "<group>"; };
+		20A855AF1EB098A9003676D1 /* MeChoiceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeChoiceView.swift; sourceTree = "<group>"; };
+		20A855B11EB0990A003676D1 /* MeFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeFooterView.swift; sourceTree = "<group>"; };
 		20B59EF41E9B203E005C0D37 /* CycleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleView.swift; sourceTree = "<group>"; };
 		20B59EFA1E9B20BB005C0D37 /* CycleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CycleCell.swift; sourceTree = "<group>"; };
 		20B59EFB1E9B20BB005C0D37 /* CycleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CycleCell.xib; sourceTree = "<group>"; };
@@ -246,7 +252,9 @@
 		207008BE1E962DAB00675A83 /* Me */ = {
 			isa = PBXGroup;
 			children = (
-				207008BF1E962DAB00675A83 /* DTMeController.swift */,
+				20A855A81EB085E9003676D1 /* Controller */,
+				20A855AA1EB085E9003676D1 /* Model */,
+				20A855AB1EB085E9003676D1 /* View */,
 			);
 			path = Me;
 			sourceTree = "<group>";
@@ -324,6 +332,31 @@
 			children = (
 				20A8555E1EAEE704003676D1 /* DanPinCell.swift */,
 				20A8555F1EAEE704003676D1 /* DanPinCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		20A855A81EB085E9003676D1 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				20A855A91EB085E9003676D1 /* DTMeController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		20A855AA1EB085E9003676D1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		20A855AB1EB085E9003676D1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				20A855AD1EB0865A003676D1 /* MeHeaderView.swift */,
+				20A855AF1EB098A9003676D1 /* MeChoiceView.swift */,
+				20A855B11EB0990A003676D1 /* MeFooterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -548,6 +581,8 @@
 			files = (
 				20A3972E1EA7376A00731B29 /* BannerDetailController.swift in Sources */,
 				20B59F411E9DF9DF005C0D37 /* BaseController.swift in Sources */,
+				20A855AE1EB0865A003676D1 /* MeHeaderView.swift in Sources */,
+				20A855B21EB0990A003676D1 /* MeFooterView.swift in Sources */,
 				207008891E962D9F00675A83 /* ViewController.swift in Sources */,
 				207008C81E962DAB00675A83 /* DTTabBarController.swift in Sources */,
 				207008CA1E962DAB00675A83 /* DTConst.swift in Sources */,
@@ -557,7 +592,8 @@
 				20A855601EAEE704003676D1 /* DanPinCell.swift in Sources */,
 				207008C41E962DAB00675A83 /* DTClassifyController.swift in Sources */,
 				207008C71E962DAB00675A83 /* DTNavigationController.swift in Sources */,
-				207008C91E962DAB00675A83 /* DTMeController.swift in Sources */,
+				20A855AC1EB085E9003676D1 /* DTMeController.swift in Sources */,
+				20A855B01EB098A9003676D1 /* MeChoiceView.swift in Sources */,
 				20B59EF51E9B203E005C0D37 /* CycleView.swift in Sources */,
 				20A855571EADF538003676D1 /* LoginController.swift in Sources */,
 				207008CB1E962DAB00675A83 /* QorumLogs.swift in Sources */,
