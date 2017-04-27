@@ -30,6 +30,7 @@ class DTMeController: UIViewController {
         view.addSubview(tableView)
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         tableView.tableHeaderView = headerView
+        tableView.tableFooterView = footerView
     }
     
     private lazy var headerView: MeHeaderView = {

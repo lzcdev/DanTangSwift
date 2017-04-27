@@ -23,10 +23,15 @@ class MeFooterView: UIView {
     
     private func setupUI() {
         addSubview(likeBtn)
+        addSubview(messageLab)
         
         likeBtn.snp.makeConstraints { (make) in
             make.center.equalTo(self.center)
             make.width.height.equalTo(50)
+        }
+        messageLab.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self)
+            make.top.equalTo(likeBtn.snp.bottom).offset(10)
         }
     }
     
@@ -35,6 +40,15 @@ class MeFooterView: UIView {
         likeBtn.setImage(UIImage(named: "Me_blank_50x50_"), for: .normal)
         likeBtn.addTarget(self, action: #selector(login), for: .touchUpInside)
         return likeBtn
+    }()
+    
+    private lazy var messageLab: UILabel = {
+       let messageLab = UILabel()
+        messageLab.text = "登录以享受功能"
+        messageLab.textAlignment = .center
+        messageLab.textColor = UIColor.colorWith(200, green: 200, blue: 200, alpha: 1)
+        messageLab.font = UIFont.systemFont(ofSize: 15)
+        return messageLab
     }()
     
     func login() {

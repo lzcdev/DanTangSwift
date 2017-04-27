@@ -80,6 +80,7 @@ class MeHeaderView: UIView {
         iconBtn.setImage(UIImage(named: "Me_AvatarPlaceholder_75x75_"), for: .normal)
         iconBtn.layer.cornerRadius = iconBtn.frame.size.width * 0.5
         iconBtn.layer.masksToBounds = true
+        iconBtn.addTarget(self, action: #selector(iconBtnClick), for: .touchUpInside)
         return iconBtn
     }()
     // 姓名
@@ -91,6 +92,12 @@ class MeHeaderView: UIView {
         nameLab.textAlignment = .center
         return nameLab
     }()
+    
+    // 点击头像
+    func iconBtnClick() {
+        let nav = DTNavigationController(rootViewController: LoginController())
+        UIApplication.shared.keyWindow?.rootViewController?.present(nav, animated: true, completion: nil)
+    }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
