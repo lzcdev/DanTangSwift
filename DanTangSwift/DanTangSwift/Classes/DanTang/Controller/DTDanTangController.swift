@@ -10,8 +10,7 @@ import UIKit
 
 class DTDanTangController: BaseController, UIScrollViewDelegate {
     
-    var topScrollView = UIScrollView()
-    var topView = UIView() // 顶部背景
+    var topScrollView = UIScrollView() // 顶部
     let line = UIView() // 小横线
     let contentView = UIScrollView() // 下面的内容区域
     var selectedButton: UIButton! // 顶部背景上的按钮
@@ -69,21 +68,15 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
     
     private func setTopView() {
         
+        let count = self.childViewControllers.count
+        let buttonW = ScreenWidth / 5
+        
+        
         topScrollView = UIScrollView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
-        //topScrollView.backgroundColor = UIColor.cyan
-        // contentView.isPagingEnabled = true
-        topScrollView.contentSize = CGSize(width: self.view.frame.size.width * CGFloat(2), height: 0)
-        // contentView.bounces = false
-        // contentView.delegate = self
-        //  self.view.insertSubview(contentView, at: 0)
+        topScrollView.contentSize = CGSize(width: ScreenWidth / 5 * count , height: 0)
+        topScrollView.showsHorizontalScrollIndicator = false
         view.addSubview(topScrollView)
         
-        //topView = UIView(frame: CGRect(x: 0, y: NavHeight, width: ScreenWidth, height: HomeTitlesViewHeight))
-        //topView.backgroundColor = UIColor.colorWith(240, green: 240, blue: 240, alpha: 1)
-        //view.addSubview(topView)
-        
-        let count = self.childViewControllers.count
-        let buttonW = ScreenWidth / 6
         
         line.backgroundColor = GlobalColor
         line.frame.size.height = 2
@@ -129,7 +122,17 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
             return
         }
         
+        if button.tag == 2 {
+            UIView.animate(withDuration: 0.25) {
+                self.topScrollView.contentOffset = CGPoint(x: 0, y: 0)
+            }
+        }
         
+        if button.tag == 5 {
+            UIView.animate(withDuration: 0.25) {
+                self.topScrollView.contentOffset = CGPoint(x: ScreenWidth / 5, y: 0)
+            }
+        }
         
         selectedButton.isSelected = false
         button.isSelected = true
@@ -171,8 +174,7 @@ class DTDanTangController: BaseController, UIScrollViewDelegate {
         
         self.scrollViewDidEndScrollingAnimation(scrollView)
         let index = scrollView.contentOffset.x / self.view.frame.size.width;
-        changeVC(button: topView.subviews[Int(index)] as! UIButton)
-        
+        changeVC(button: topScrollView.subviews[Int(index)+1] as! UIButton)
     }
     
 }
