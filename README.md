@@ -1,2 +1,2 @@
 # DanTangSwift
-单糖项目，swift3练手
+单糖项目，Swift练习
